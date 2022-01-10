@@ -20,7 +20,9 @@ public class JsonObject extends Json {
 
     @Override
     public String toJson() {
-        if (map.isEmpty()) return "{}";
+        if (map.isEmpty()) {
+            return "{}";
+        }
         String s = "{";
 
         for (String key:map.keySet()) {
