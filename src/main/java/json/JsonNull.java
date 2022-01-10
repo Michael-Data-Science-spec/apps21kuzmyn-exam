@@ -5,10 +5,10 @@ package json;
  */
 
 public class JsonNull extends Json {
+    private final static String NUL = "null";
 
     @Override
     public String toJson() {
-        // ToDo
-        return null;
+        return NUL;
     }
 }

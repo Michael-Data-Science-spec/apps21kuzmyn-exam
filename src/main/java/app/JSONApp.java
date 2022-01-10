@@ -6,6 +6,7 @@ import json.*;
 /**
  * Created by Andrii_Rodionov on 1/3/2017.
  */
+
 public class JSONApp {
     public static void main(String[] args) {
         Json jYear = new JsonNumber(2);
@@ -33,8 +34,18 @@ public class JSONApp {
     }
 
     public static JsonObject sessionResult() {
-        JsonObject jsonObject = null;
-        // ToDo
-        return jsonObject;
+        JsonObject jSessionResults;
+
+        Student anRad = new Student(
+                "Andrii",
+                "Rodionov",
+                2,
+                new Tuple<>("OOP", 3),
+                new Tuple<>("English", 5),
+                new Tuple<>("Math", 2)
+        );
+
+        jSessionResults = anRad.toJsonObject();
+        return jSessionResults;
     }
 }
